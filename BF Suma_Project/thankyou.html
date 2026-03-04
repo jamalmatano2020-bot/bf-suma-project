@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Success | BF Suma</title>
+    </head>
+    <body style="text-align: center; padding: 50px; font-family: sans-serif;">
+        <h1 id="welcome-message">Thank you!</h1>
+        <p>I have received your details and will contact you on WhatsApp shortly.</p>
+        <a href="index.html">Go back to Home</a>
+
+        <script>
+        // 1. Get the URL parameters (the stuff after the '?')
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // 2. Look for the 'name' we passed from the form
+        const userName = urlParams.get('name');
+
+        // 3. If a name exists, update the H1 text
+        if (userName) {
+            document.getElementById('welcome-message').innerText = "Thank you, " + userName + "!";
+        }
+    </script>
+    </body>
+</html>
